@@ -1,0 +1,4 @@
+baseURL = "https://jimbi-o.github.io/"
+languageCode = "ja"
+title = "グラフィックスプログラマの覚書"
+theme = "ananke"

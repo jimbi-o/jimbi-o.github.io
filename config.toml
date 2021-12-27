@@ -1,4 +1,4 @@
 baseURL = "https://jimbi-o.github.io/"
 languageCode = "ja"
-title = "グラフィックスプログラマの覚書"
-theme = "ananke"
+title = "グラフィックスプログラミング覚書"
+theme = "PaperMod"

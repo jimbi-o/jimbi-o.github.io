@@ -1,7 +1,7 @@
 ---
 title: "github+hugo覚書"
 date: 2021-12-27T17:34:36+09:00
-draft: true
+draft: false
 ---
 
 ## 作業メモ

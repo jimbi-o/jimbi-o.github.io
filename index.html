@@ -41,10 +41,50 @@
 </span>
 </div>
 <ul id=menu>
+<li>
+<a href=https://jimbi-o.github.io/about/ title=about>
+<span>about</span>
+</a>
+</li>
+<li>
+<a href=https://jimbi-o.github.io/categories/ title=categories>
+<span>categories</span>
+</a>
+</li>
+<li>
+<a href=https://jimbi-o.github.io/tags/ title=tags>
+<span>tags</span>
+</a>
+</li>
 </ul>
 </nav>
 </header>
 <main class=main>
+<article class=first-entry>
+<header class=entry-header>
+<h2>appveyor + codecov + coverity scan
+</h2>
+</header>
+<section class=entry-content>
+<p>作業レポジトリ
+d3d12がVisual Studioのみなので、travis捨ててappveyorだけあればいいやという動機で着手。
+appveyor + codecov version: 1.0.{build} image: - Visual Studio 2019 configuration: - Debug - Release install: - choco install opencppcoverage codecov - set PATH=C:\Program Files\OpenCppCoverage;%PATH% before_build: - cmd: cmake -S . -B build -DBUILD_WITH_TEST=ON build_script: - cmake --build build --config %configuration% for: - matrix: only: - configuration: Debug after_build: - cd build - OpenCppCoverage.exe --sources src --sources tests --export_type cobertura:coverage.xml --modules "*.exe" --cover_children -- %configuration%/illuminate.exe -C %configuration% --output-on-failure - codecov -f coverage....</p>
+</section>
+<footer class=entry-footer><span title="2021-12-27 23:30:18 +0900 +0900">December 27, 2021</span></footer>
+<a class=entry-link aria-label="post link to appveyor + codecov + coverity scan" href=https://jimbi-o.github.io/posts/20211227-appveyor-codecov-coverity/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>github + hugo
+</h2>
+</header>
+<section class=entry-content>
+<p>作業メモ 作業レポジトリ
+hugoをインストール sudo apt install hugo quickstartに則ってコンテンツを作成 config.tomlのlanguageCodeを変更 languageCode = "ja" RSS用の設定らしい ルートディレクトリ下に.github/workflows/gh-pages.ymlを作成 こちらに中身が置いてある githubでレポジトリ[username].github.ioを作成 こちらに従ってデプロイ用のトークンを設定 gitにcommitしてpushする [username].github.ioのレポジトリのSettings > Pages > Github Pages > Source で Branch:mainになっているところをBranch:gh-pagesに変更 hugoのgithub actionsだとデフォルトでgh-pagesにコミットされるため 参考 quickstart ローカルでの動作確認URL: http://localhost:1313/ WSL2だとLiveReloadが動かない？ -> symbolic link越しで/dev/mnt以下にリンクしていると動かないらしい。 githubにサイトをセットアップする 初期セットアップ step-by-step tutorial another tutorial </p>
+</section>
+<footer class=entry-footer><span title="2021-12-27 17:34:36 +0900 +0900">December 27, 2021</span></footer>
+<a class=entry-link aria-label="post link to github + hugo" href=https://jimbi-o.github.io/posts/20211227-setup-hugo-with-github/></a>
+</article>
 </main>
 <footer class=footer>
 <span>&copy; 2021 <a href=https://jimbi-o.github.io/>グラフィックスプログラミング覚書</a></span>

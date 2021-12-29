@@ -1,8 +1,7 @@
 baseURL = "https://jimbi-o.github.io/"
 languageCode = "ja"
-title = "グラフィックスプログラミング覚書"
+title = "notes on graphics programming"
 theme = "PaperMod"
-[menu]
 [[menu.main]]
 identifier = 'about'
 name = 'about'
@@ -18,6 +17,22 @@ identifier = 'tags'
 name = 'tags'
 url = '/tags/'
 weight = 30
-[socialIcons]
+[params]
+ShowShareButtons = 'true'
+ShowReadingTime = 'true'
+ShowToc = 'true'
+TocOpen = 'true'
+ShowCodeCopyButtons = 'true'
+[params.homeInfoParams]
+Title = "Welcome!"
+Content = "Notes on graphics programming"
+[[params.socialIcons]]
 name = 'twitter'
 url = 'https://twitter.com/o_jimbi'
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/jimbi-o'
+# [[params.editPost]]
+# URL = "https://github.com/jimbi-o.github.io/content"
+# Text = "Suggest Changes"
+# appendFilePath = true

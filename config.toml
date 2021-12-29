@@ -2,3 +2,22 @@ baseURL = "https://jimbi-o.github.io/"
 languageCode = "ja"
 title = "グラフィックスプログラミング覚書"
 theme = "PaperMod"
+[menu]
+[[menu.main]]
+identifier = 'about'
+name = 'about'
+url = '/about/'
+weight = 10
+[[menu.main]]
+identifier = 'categories'
+name = 'categories'
+url = '/categories/'
+weight = 20
+[[menu.main]]
+identifier = 'tags'
+name = 'tags'
+url = '/tags/'
+weight = 30
+[socialIcons]
+name = 'twitter'
+url = 'https://twitter.com/o_jimbi'

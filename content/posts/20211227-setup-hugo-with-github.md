@@ -1,10 +1,13 @@
 ---
-title: "github+hugo覚書"
+title: "github + hugo"
 date: 2021-12-27T17:34:36+09:00
-draft: false
+categories: misc
+tags: [hugo, github, blog]
 ---
 
 ## 作業メモ
+
+[作業レポジトリ](https://github.com/jimbi-o/minimal-cpp-pj)
 
 1. hugoをインストール
     * ``sudo apt install hugo``

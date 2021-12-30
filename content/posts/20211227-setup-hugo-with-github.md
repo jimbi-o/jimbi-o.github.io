@@ -7,7 +7,7 @@ tags: [hugo, github, blog]
 
 ## 作業メモ
 
-[作業レポジトリ](https://github.com/jimbi-o/minimal-cpp-pj)
+[作業レポジトリ](https://github.com/jimbi-o/jimbi-o.github.io)
 
 1. hugoをインストール
     * ``sudo apt install hugo``

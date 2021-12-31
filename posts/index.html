@@ -66,6 +66,22 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Agility SDK
+</h2>
+</header>
+<section class=entry-content>
+<p>作業ディレクトリ
+Enhanced Barriersが使いたいので導入。
+最新版dxcの入手 Releases · microsoft/DirectXShaderCompilerから最新版のURLを取得。CMakeからプロジェクトに取り込み。
+CPMAddPackage( NAME dxc URL https://github.com/microsoft/DirectXShaderCompiler/releases/download/v1.6.2112/dxc_2021_12_08.zip VERSION v1.6.2112 DOWNLOAD_ONLY yes )#... target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "${dxc_SOURCE_DIR}/inc" )Agility SDKの組み込み こちらもcmakeで組み込み。NuGet Gallery | Microsoft.Direct3D.D3D12 1.700.10-previewからDownload packageのリンクを取得。バージョン上がったら必要に応じて追随。
+CPMAddPackage( NAME d3d12 URL https://www.nuget.org/api/v2/package/Microsoft.Direct3D.D3D12/1.700.10-preview VERSION v1.700.10-preview DOWNLOAD_ONLY yes )#... target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE "${d3d12_SOURCE_DIR}/build/native/include" add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E make_directory "$&lt;TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/d3d12")add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${d3d12_SOURCE_DIR}/build/native/bin/x64/D3D12Core.dll" "$&lt;$&lt;CONFIG:Debug>:${d3d12_SOURCE_DIR}/build/native/bin/x64/D3D12Core.pdb>" "$&lt;$&lt;CONFIG:Debug>:${d3d12_SOURCE_DIR}/build/native/bin/x64/d3d12SDKLayers.dll>" "$&lt;$&lt;CONFIG:Debug>:${d3d12_SOURCE_DIR}/build/native/bin/x64/d3d12SDKLayers.pdb>" "$&lt;TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/d3d12")D3D12SDKVersionはDirectX 12 Agility SDK Downloads - DirectX Developer Blogから確認。
+参考 Getting Started with the Agility SDK - DirectX Developer Blog D3D12 Enhanced Barriers Preview - DirectX Developer Blog misc....</p>
+</section>
+<footer class=entry-footer><span title="2021-12-29 12:45:12 +0900 +0900">December 29, 2021</span>&nbsp;·&nbsp;1 min</footer>
+<a class=entry-link aria-label="post link to Agility SDK" href=https://jimbi-o.github.io/posts/20211229-agility-sdk/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>appveyor + codecov + coverity scan
 </h2>
 </header>
